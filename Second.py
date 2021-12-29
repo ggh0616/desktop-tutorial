@@ -30,7 +30,7 @@ while (True):
     all_data = soup.find("div", attrs={"class":"calendar"}).find("div", attrs={"class":"align_box"}).find("tbody").find_all("tr")
     can_re = soup.find_all("td", attrs={"data-state_cd":"10"})
             
-    print("코트: " + str(i))        
+    print("코트: " + str(i) +"번")         
     for i_i in can_re:
         a_tag = i_i.select("a")[0]['id']
         fi_day = re.findall(r'\d+', a_tag)        
@@ -38,19 +38,6 @@ while (True):
             
     i += 1    
     
-    time.sleep(1)        
-
+    time.sleep(1)  
     
-        
-# for i in all_data:
-#     print(a_tag[i]['id'])
-
-# print(all_data)
-    
-        
-# cant_re = soup.find_all("span", attrs={"class":"state_20"})
-# for c_rese in cant_re:
-#     if rese.get_text() == "예약불가" or "마감":
-#         print(c_rese)
-    
-time.sleep(5)    
+time.sleep(1)    
